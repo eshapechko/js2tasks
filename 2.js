@@ -36,9 +36,17 @@ console.log(result);
 
 for (let i = 0; i < 10; i = i + 2) {
   let getNumber = +prompt("Введите число");
-  console.log((getNumber = getNumber == 10 ? "Равно 10" : "Не равно 10"));
+  if (getNumber == 10) {
+    console.log("Равно 10");
+  } else {
+    console.log("Не равно 10");
+  }
 }
-7;
+// Или можно сделать так
+for (let i = 0; i < 10; i = i + 2) {
+  let getNumber = +prompt("Введите число");
+  console.log(getNumber == 10 ? "Равно 10" : "Не равно 10");
+}
 // Задание 4
 
 // Вывести в консоль квадраты чисел от 0 до 100 (не включая 100) - т.е. вывести числа 0, 1, 4, 9, 16...
