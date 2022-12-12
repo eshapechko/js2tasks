@@ -36,7 +36,6 @@ console.log(result);
 
 for (let i = 0; i < 10; i = i + 2) {
   let getNumber = +prompt("Введите число");
-  getNumber + i;
   console.log((getNumber = getNumber == 10 ? "Равно 10" : "Не равно 10"));
 }
 7;
@@ -108,17 +107,26 @@ while (i < 3) {
 // task solution
 // const getRandomRGB = (n1, n2, n3) => "rgb(" + n1 + "," + n2 + "," + n3 + ")";
 
-const getRandomRGB = (n1, n2, n3) => `rgb(${n1},${n2},${n3})`;
+// const getRandomRGB = (n1, n2, n3) => `rgb(${n1},${n2},${n3})`;
+
+let n1 = getRandomInteger(0, 255);
+let n3 = getRandomInteger(0, 255);
+let n2 = getRandomInteger(0, 255);
+const getRandomRGB = (n1, n2, n3) =>
+  `случайный цвет в формате rgb(${n1},${n2},${n3})`;
 
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-console.log(`случайный цвет в формате
-  ${getRandomRGB(
-    getRandomInteger(0, 255),
-    getRandomInteger(0, 255),
-    getRandomInteger(0, 255)
-  )}`);
+
+console.log(getRandomRGB(n1, n2, n3));
+
+// console.log(`случайный цвет в формате
+//   ${getRandomRGB(
+//     getRandomInteger(0, 255),
+//     getRandomInteger(0, 255),
+//     getRandomInteger(0, 255)
+//   )}`);
 
 // Задание 9
 
@@ -137,7 +145,7 @@ function getNum(n) {
   for (let i = 1; i < n; i = i + 0.5) {
     if (i % 1 == 0) {
       console.log(i + " integer");
-    } else if (i % 1 != 0) {
+    } else {
       console.log(i + " decimal");
     }
   }
